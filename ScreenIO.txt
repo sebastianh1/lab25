@@ -1,0 +1,69 @@
+*************************************************************
+* PROGRAMMED BY : Corey Dickinson & Sebastian Hooshmand
+* STUDENT ID    : 361553 & 1009369
+* CLASS         : CS1A - MW - 8AM
+* LAB #25       : Array Train - Set #1
+*************************************************************
+
+TEST CASE FOR CalcAvgNumAr
+Average age: 26.82
+
+
+
+TEST CASE FOR FindFirstInstance 
+Please enter the age you want to search for: 22
+The first person in the list with an age of 22 is: Kasra and their index is: 1!
+
+Please enter the age you want to search for: 5
+The first person in the list with an age of 5 is: Jeremy and their index is: 8!
+
+Please enter the age you want to search for: 21
+The first person in the list with an age of 21 is: Nick and their index is: 4!
+
+Please enter the age you want to search for: 10
+There is no one with that age in this group.
+
+
+
+TEST CASE FOR FindNumberOfNumInstances 
+Please enter the age you want to search for: 22
+Number of Instances for age: 1
+
+Please enter the age you want to search for: 19
+Number of Instances for age: 2
+
+Please enter the age you want to search for: 21
+Number of Instances for age: 3
+
+Please enter the age you want to search for: 100
+There is no instances of that age.
+
+
+
+TEST CASE FOR SearchStringAr 
+Please enter the name you want to search for: Zac
+Zac is 22 years old and their index is: 1
+
+Please enter the name you want to search for: Abe
+Abe is 5 years old and their index is: 8
+
+Please enter the name you want to search for: Jeremy
+Jeremy is 62 years old and their index is: 9
+
+Please enter the name you want to search for: Mike
+There is no one with that name in this group. 
+
+
+
+TEST CASE FOR FindLargestAr
+Kasra is the oldest with an age of 75 and their index is: 1!
+
+
+
+TEST CASE FOR FindLowestAr
+Abe is the youngest with an age of 5 and their index is: 7!
+
+
+
+TEST CASE FOR SumAr
+The sum of all the ages is: 295
