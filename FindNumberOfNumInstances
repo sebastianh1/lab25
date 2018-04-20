@@ -1,0 +1,46 @@
+/*******************************************************************************
+ * AUTHORs		: Corey Dickinson & Sebastian Hooshmand
+ * Lab #25		: Array Train - Set #1
+ * CLASS		: CS1A
+ * SECTION		: MW 8am
+ * DUE DATE		: 4/23/18
+ ******************************************************************************/
+
+#include "lab25.h"
+
+/******************************************************************************
+* FindNumberOfNumInstances
+* This function finds the amount of times a number appears in an array.
+* ==> returns the total number of times a number is in an array.
+* -----------------------------------------------------------------------------
+* PRE-CONDITIONS
+* 		The following needs to be input
+* 			NUM_AR  : The array to be averaged
+* 			AR_SIZE : The size of the array
+*			num     : The number you're searching the quantity of in the array
+* POST-CONDITIONS
+* 		==> Returns the total times a number is found in the array.
+******************************************************************************/
+int FindNumberOfNumInstances(const int NUM_AR[], const int AR_SIZE, int num)
+{
+	int instance;	//CALC      - The location in the array
+	int foundNum; 	//CALC, OUT - Counter for how many times the number
+					//					is found.
+
+	foundNum = 0;
+
+	//PROCESSING - for loop to go through each index of the array
+	for(instance = 0; instance < AR_SIZE; instance++)
+	{
+		//PROCESSING - If statement to increment the found count if the number
+		//					is found in the array.
+		if(NUM_AR[instance] == num)
+		{
+			foundNum++;
+		}
+
+		}
+
+	return foundNum;
+
+}
