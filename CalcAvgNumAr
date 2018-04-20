@@ -1,0 +1,52 @@
+/*******************************************************************************
+ * AUTHORs		: Corey Dickinson & Sebastian Hooshmand
+ * Lab #25		: Array Train - Set #1
+ * CLASS		: CS1A
+ * SECTION		: MW 8am
+ * DUE DATE		: 4/23/18
+ ******************************************************************************/
+
+#include "lab25.h"
+
+/******************************************************************************
+* CalcAvgNumAr
+* This function receives an array of numbers and the size of the array and
+* calculates the average of all the numbers in the array.
+* ==> returns the average of all numbers in the array.
+* -----------------------------------------------------------------------------
+* PRE-CONDITIONS
+* 		The following needs to be input
+* 			NUM_AR  : The array to be averaged
+* 			AR_SIZE : The size of the array
+*
+* POST-CONDITIONS
+* 		==> Returns the average of all numbers in the array.
+******************************************************************************/
+double CalcAvgNumAr(const int NUM_AR[], const int AR_SIZE)
+{
+	int    instance;  // CALC      - The number of items in the array
+	int    sum;		  // CALC      - The sum of all the numbers in the array
+	double average;	  // CALC, OUT - The average of all numbers in the array
+
+	//Initializing sum to 0
+	sum = 0;
+
+	//PROCESSING - for loop to add all the numbers in the array
+	for(instance = 0; instance < AR_SIZE; instance++)
+	{
+		sum = sum + NUM_AR[instance];
+	}
+
+	//If statement making sure array size isn't 0 before dividing.
+	if(AR_SIZE != 0)
+	{
+		//PROCESSING - calculating the average
+		average = float(sum)/AR_SIZE;
+	}
+
+	return average;
+
+}
+
+
+
