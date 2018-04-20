@@ -1,0 +1,45 @@
+/*******************************************************************************
+ * AUTHORs		: Corey Dickinson & Sebastian Hooshmand
+ * Lab #25		: Array Train - Set #1
+ * CLASS		: CS1A
+ * SECTION		: MW 8am
+ * DUE DATE		: 4/23/18
+ ******************************************************************************/
+
+#include "lab25.h"
+
+/******************************************************************************
+* FindLargestAr
+* This function finds the largest number in the array.
+* ==> returns the instance that the largest number is located.
+* -----------------------------------------------------------------------------
+* PRE-CONDITIONS
+* 		The following needs to be input
+* 			NUM_AR  : The array to be averaged
+* 			AR_SIZE : The size of the array
+*
+* POST-CONDITIONS
+* 		==> returns
+* 				largestIndex: The index that stores the largest number.
+******************************************************************************/
+
+int FindLargestAr(const int NUM_AR[], const int AR_SIZE)
+{
+	int largestIndex;	//CALC - The index with the largest location
+	int indexCount;		//CALC - Used to increment the index.
+
+	largestIndex = 0;
+
+	//PROCESSING - for loop to go through each index in the array
+	for(indexCount = 0; indexCount < AR_SIZE; indexCount++)
+	{
+		//PROCESSING - if statement that checks if the current index is larger
+		//			   than the current largest index and replaces the current
+		//			   largest index if it is.
+		if(NUM_AR[indexCount] > NUM_AR[largestIndex])
+		{
+			largestIndex = indexCount;
+		}
+	}
+	return largestIndex;
+}
