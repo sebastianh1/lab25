@@ -1,0 +1,42 @@
+/*******************************************************************************
+ * AUTHORs		: Corey Dickinson & Sebastian Hooshmand
+ * Lab #25		: Array Train - Set #1
+ * CLASS		: CS1A
+ * SECTION		: MW 8am
+ * DUE DATE		: 4/23/18
+ ******************************************************************************/
+
+#include "lab25.h"
+
+/******************************************************************************
+* SumAr
+* This function receives an array of numbers and the size of the array and
+* calculates the sum of all the numbers in the array.
+* ==> returns the sum of all numbers in the array.
+* -----------------------------------------------------------------------------
+* PRE-CONDITIONS
+* 		The following needs to be input
+* 			NUM_AR  : The array to be summed
+* 			AR_SIZE : The size of the array
+*
+* POST-CONDITIONS
+* 		==> Returns the sum of all numbers in the array.
+******************************************************************************/
+
+int SumAr(const int NUM_AR[], const int AR_SIZE)
+{
+	int    instance;  // CALC      - The number of items in the array
+	int    sum;		  // CALC      - The sum of all the numbers in the array
+
+	//Initializing sum to 0
+	sum = 0;
+
+	//PROCESSING - for loop to add all the numbers in the array
+	for(instance = 0; instance < AR_SIZE; instance++)
+	{
+		sum = sum + NUM_AR[instance];
+	}
+
+	return sum;
+
+}
