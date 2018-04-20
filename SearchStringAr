@@ -1,0 +1,52 @@
+/*******************************************************************************
+ * AUTHORs		: Corey Dickinson & Sebastian Hooshmand
+ * Lab #25		: Array Train - Set #1
+ * CLASS		: CS1A
+ * SECTION		: MW 8am
+ * DUE DATE		: 4/23/18
+ ******************************************************************************/
+
+#include "lab25.h"
+
+/******************************************************************************
+* SearchStringAr
+* This function searches for a word(s) in the array.
+* ==> returns the instance it's located at.
+* -----------------------------------------------------------------------------
+* PRE-CONDITIONS
+*		STRING_AR, : The array you're searching
+*		AR_SIZE,   : The size if the array
+*		search	   : The string being searched for
+*
+* POST-CONDITIONS
+* 		==> returns the instance the string being searched for is located at.
+******************************************************************************/
+
+int SearchStringAr(const string STRING_AR[], const int AR_SIZE, string search)
+{
+	int instance;//CALC, OUT - The location in the array
+	bool found;	 //CALC      - Boolean to state if the string is found or not
+
+	instance = 0;
+	found = false;
+
+	//PROCESSING - while loop to keep searching through the array till the
+	//			   		the string is found.
+	while(!found && instance < AR_SIZE)
+	{
+		//PROCESSING - if statement that changes found to true when the string
+		// 			   is found.
+		if(STRING_AR[instance] == search)
+		{
+			found = true;
+			//decrement instance so the right one is output after the loop exits
+			instance--;
+		}
+		instance++;
+	}
+
+	return instance;
+}
+
+
+
