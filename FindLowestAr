@@ -1,0 +1,44 @@
+/*******************************************************************************
+ * AUTHORs		: Corey Dickinson & Sebastian Hooshmand
+ * Lab #25		: Array Train - Set #1
+ * CLASS		: CS1A
+ * SECTION		: MW 8am
+ * DUE DATE		: 4/23/18
+ ******************************************************************************/
+
+#include "lab25.h"
+
+/******************************************************************************
+* FindLowestAr
+* This function finds the lowest number in the array.
+* ==> returns the instance that the lowest number is located.
+* -----------------------------------------------------------------------------
+* PRE-CONDITIONS
+* 		The following needs to be input
+* 			NUM_AR  : The array to be averaged
+* 			AR_SIZE : The size of the array
+*
+* POST-CONDITIONS
+* 		==> returns
+* 				lowestIndex: The index that stores the lowest number.
+******************************************************************************/
+
+int FindLowestAr(const int NUM_AR[], const int AR_SIZE)
+{
+	int lowestIndex;	//CALC - The index with the lowest location
+	int indexCount;		//CALC - Used to increment the index.
+
+	lowestIndex = 0;
+	//PROCESSING - for loop to go through each index in the array
+	for(indexCount = 0; indexCount < AR_SIZE; indexCount++)
+	{
+		//PROCESSING - if statement that checks if the current index is smaller
+		//			   than the current lowest index and replaces the current
+		//			   lowest index if it is.
+		if(NUM_AR[indexCount] < NUM_AR[lowestIndex])
+		{
+			lowestIndex = indexCount;
+		}
+	}
+	return lowestIndex;
+}
